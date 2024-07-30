@@ -3,6 +3,12 @@
   "buid": {
     "dockerfile": "Dockerfile"
   },
+  "runArgs": ["--gpus","all"],
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
+  "runArgs": ["--gpus", "all"],
+  "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+  },
   "hostRequirements": {
     "cpus": 4
   },
@@ -17,5 +23,5 @@
       ]
     }
   },
-  "postCreateCommand": "pip install jupyterlab"
+  "postCreateCommand": "pip install -r requirements.txt"
 }
