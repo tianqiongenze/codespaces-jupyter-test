@@ -4,7 +4,7 @@
     "dockerfile": "Dockerfile"
   },
   "hostRequirements": {
-    "cpus": 16
+    "cpus": 8
   },
   "customizations": {
     "codespaces": {
