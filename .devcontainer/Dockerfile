@@ -16,6 +16,7 @@ RUN pip install torch torchvision torchaudio
 
 # 安装 JupyterLab
 RUN pip install jupyterlab
-
+# Set the default command to run Jupyter Lab
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--no-browser"]
 # 设置工作目录
 WORKDIR /workspace
