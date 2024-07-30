@@ -1,11 +1,11 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "hostRequirements": {
-    "cpus": 4
+  "name": "PyTorch GPU",
+  "buid": {
+    "dockerfile": "Dockerfile"
   },
-  "waitFor": "onCreateCommand",
-  "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "",
+  "hostRequirements": {
+    "cpus": 16
+  },
   "customizations": {
     "codespaces": {
       "openFiles": []
@@ -16,5 +16,6 @@
         "ms-python.python"
       ]
     }
-  }
+  },
+  "postCreateCommand": "pip install jupyterlab"
 }
